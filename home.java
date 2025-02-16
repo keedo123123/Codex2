@@ -93,11 +93,9 @@ public class home extends JFrame {
         JPanel profilePanel = new JPanel(new BorderLayout());
         profilePanel.setBackground(new Color(240, 240, 240));
 
-        // Top panel for settings button
         JPanel topPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         topPanel.setBackground(new Color(240, 240, 240));
 
-        // Settings button as icon
         JButton settingsButton = new JButton();
         ImageIcon settingsIcon = loadImage("https://cdn-icons-png.flaticon.com/512/3524/3524659.png", 24, 24);
         settingsButton.setIcon(settingsIcon);
@@ -106,7 +104,6 @@ public class home extends JFrame {
         settingsButton.setFocusPainted(false);
         settingsButton.addActionListener(e -> JOptionPane.showMessageDialog(this, "Settings Button Clicked!"));
 
-        // Add hover effect
         settingsButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
@@ -124,7 +121,6 @@ public class home extends JFrame {
         profilePanel.add(topPanel, BorderLayout.NORTH);
 
 
-        // Rest of the profile components (center aligned)
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
         centerPanel.setBackground(new Color(240, 240, 240));
@@ -208,12 +204,12 @@ public class home extends JFrame {
         burgerPanel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
-                burgerPanel.setBackground(new Color(220, 220, 220));  // Light gray on hover
+                burgerPanel.setBackground(new Color(220, 220, 220));  
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                burgerPanel.setBackground(new Color(240, 240, 240));  // Original color
+                burgerPanel.setBackground(new Color(240, 240, 240));  
             }
 
             @Override
@@ -267,9 +263,9 @@ public class home extends JFrame {
     private void showPanel(String panelName) {
         cardLayout.show(mainContentPanel, panelName);
         if (panelName.equals("Profile")) {
-            getContentPane().remove(fixedTopPanel); // Remove top bar for profile
+            getContentPane().remove(fixedTopPanel);
         } else {
-            getContentPane().add(fixedTopPanel, BorderLayout.NORTH); // Add top bar for other panels
+            getContentPane().add(fixedTopPanel, BorderLayout.NORTH); 
         }
         revalidate();
         repaint();
@@ -330,12 +326,12 @@ public class home extends JFrame {
 
             @Override
             public void mouseEntered(MouseEvent e) {
-                button.setBackground(new Color(200, 200, 200)); // Hover color
+                button.setBackground(new Color(200, 200, 200));
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                button.setBackground(new Color(240, 240, 240)); // Original color
+                button.setBackground(new Color(240, 240, 240)); 
             }
         });
 
